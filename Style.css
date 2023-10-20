@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Outfit:wght@400;700&family=Overpass:wght@400;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+
+:root{
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+    --GrayishBlue: hsl(212, 23%, 69%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+    --white:white;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+
+}
+
+body{
+    background: var(--LightGrayishBlue);
+
+}
+
+.container{
+    display: flex;
+    width: 140vh;
+    height: 50vh;
+    margin: 15vh auto;
+    background: white;
+    border-radius: 7px;
+        
+
+}
+
+.leftSection {
+    height: 50vh;
+    width: 132vh;
+    border-radius: 5px 0 0 5px;
+    background-image: url(./images/drawers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.rightSection{
+    padding: 3vh 5vh;
+}
+
+.rightSection h2{
+    color: var(--DesaturatedDarkBlue) ;
+    font-size: 5vh; 
+    margin: 10px 0;
+}
+
+.rightSection p{
+    font-size: 13px;
+    color: var(--GrayishBlue);
+}
+
+.rightSection h4{
+    color: var(--DesaturatedDarkBlue);
+}
+
+.rightfooter{
+    display: flex;
+    margin: 15px 0;
+
+}
+
+.rightfooter img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.rightfooter .icon{
+    margin-left: 34vh;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    background: var(--LightGrayishBlue);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-top: 0.5rem;
+
+}
+
+.icon:hover img {
+    filter: brightness(100);
+    transition: none;
+  }
+
+  .icon:active {
+    transform: scale(0.98);
+  }
+
+  .icon:hover{
+    background: var(--DesaturatedDarkBlue);
+}
+
+.share{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    background: var(--VeryDarkGrayishBlue);
+    border-radius: 10px;
+    visibility: hidden;
+    padding: .4rem 1rem;
+    box-shadow: 0 0 .4px var(--VeryDarkGrayishBlue);
+    
+}
+
+.shareicon img{
+    width: 1rem;
+    height: 1rem;
+    margin-left: 12px;
+}
+
+.share p{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-right: 10px;
+    font-size: .8rem;
+}
+
+.share img{
+    width: 2rem;
+    height: 2rem;
+    padding: 5px 5px;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+a img:hover {
+    transform: scale(1.2);
+  }
+
+  .show {
+    visibility: visible;
+    opacity: 1;
+    margin-bottom: 10rem;
+  }
+
+  .attribution{
+    font-size: 13px;
+    text-align: center;
+    margin-top: 12rem;
+    color: hsl(228, 45%, 44%);
+  }
+
+
+
+  @media (max-width: 375px){
+
+    .container{
+        width: 19rem;
+        display: flex;      
+        height: 36rem;
+        flex-direction: column;
+        margin-top: 20px;
+        
+    }
+    .leftSection{
+        width: 18rem;
+        height: 20rem;
+        overflow: hidden;
+         position: absolute;
+         background-size: contain;
+        margin: 10px;
+        border-radius: 5px 5px 0 0;
+         
+    }
+    .rightSection{
+        margin-top: 15rem;
+        position: absolute;
+        width: 18rem;
+
+
+    }
+    .rightSection h2{
+        font-size: 17px;
+        word-wrap: break-word;
+        
+    }
+
+    .rightfooter img{
+        height: 25px;
+        width: 25px;
+    }
+   
+    .avaterinfo h4{
+        font-size: 14px;
+        white-space: nowrap;
+
+        
+    }
+    .rightfooter p{
+        font-size: 10px;
+    }
+
+   .rightfooter .share{        
+        align-items: center;
+        border-radius: 0 0 10px 10px;
+        padding: 1rem 4rem;
+        box-shadow: 0 0 .4px var(--VeryDarkGrayishBlue);
+        margin-left: -82vh;
+        margin-bottom: -21vh;
+        
+    }
+   .icon {
+        background: var(--DesaturatedDarkBlue);
+        
+    }
+
+
+    .shareicon img{
+        margin-left: -120px;
+        width: 1rem;
+        height: 1rem;
+        
+       
+    }
+
+  
+    .share::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        background-color: #48556a;
+      }
+    .attribution{
+        margin-top: 2rem;
+        text-wrap: wrap;
+        color: hsl(228, 45%, 44%);
+    }
+   
+}
